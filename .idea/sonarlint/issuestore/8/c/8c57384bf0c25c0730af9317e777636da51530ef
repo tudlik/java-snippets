@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³”‡Ÿýÿÿÿÿ
+\
+java:S1128"FRemove this unused import 'cz.jty.restApi_test.dao.ProductRepository'.(´Ë¿‘
+Z
+java:S1128"ERemove this unused import 'cz.jty.restApi_test.model.entity.Product'.(…°Ù~

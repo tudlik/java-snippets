@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head th:fragment="head">
+        <meta charset="utf-8"/>
+        <meta name="description" content="Strany"/>
+        <meta name="keywords" content="nejake info"/>
+        <meta name="author" content="jty"/>
+        <title>my page</title>
+
+        <!-- Odkazy na potřebné styly, ikonky a skripty -->
+        <link rel="stylesheet" th:href="@{/styles/lightbox.min.css}" type="text/css"/>
+        <link rel="stylesheet" th:href="@{/styles/bootstrap.min.css}" type="text/css"/>
+        <link rel="stylesheet" th:href="@{/styles/styles.css}" type="text/css"/>
+        <link rel="shortcut icon" th:href="@{/images/ikona.ico}"/>
+
+        <script th:src="@{/scripts/lightbox-plus-jquery.min.js}"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.0.3/tinymce.min.js"></script>
+        <script>
+            tinymce.init({
+                selector: "textarea[id*=content]",
+                entities: "160,nbsp",
+                entity_encoding: "named",
+                entity_encoding: "raw"
+            });
+        </script>
+    </head>
+</head>
+<body>
+<header th:fragment="header">
+    <div id="logo">
+        <h1>Honza<span>Tylecek</span></h1>
+        <small>developer</small>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Domů</a></li>
+            <li><a href="articles">Články</a></li>
+            <li><a href="/skills">Dovednosti</a></li>
+            <li><a href="/references">Reference</a></li>
+            <li><a class="kontakt-tlacitko" href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<footer th:fragment="footer">
+    Vytvořil Honza
+</footer>
+
+</body>
+</html>

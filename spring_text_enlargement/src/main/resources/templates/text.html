@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text enlargement app</title>
+</head>
+<body>
+<h1>Text enlargement app</h1>
+<hr>
+<form action="/text" method="post">
+    <label>
+        Text to enlargement
+        <br>
+        <input type="text" name="text" id="text" th:field="${textDTO.text}">
+    </label>
+    <br>
+    <input type="submit" value="Enlarge text">
+</form>
+<div th:if="${enlargedText}">
+    <p>Enlarged text</p>
+    <p th:text="${enlargedText}"></p>
+</div>
+</body>
+</html>

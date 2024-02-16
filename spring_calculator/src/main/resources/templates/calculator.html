@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My calculator</title>
+</head>
+<body>
+<h1 th:text="${titleDTO.title}">
+</h1>
+
+<p th:text="${titleDTO.subTitle}"></p>
+<form action="/calculator" method="post">
+    <label>
+        First number:
+        <input type="number" id="number1" name="number1" th:field="${calculatorDTO.number1}"/>
+    </label><br/>
+
+    <label>Operation:
+        <select id="operation" name="operation" th:field="${calculatorDTO.operation}">
+            <option value="+">Plus</option>
+            <option value="-">Minus</option>
+            <option value="*">Times</option>
+            <option value="/">Divide by</option>
+        </select>
+    </label><br/>
+
+    <label>
+        Second number:
+        <input type="number" id="number2" name="number2" th:field="${calculatorDTO.number2}"/>
+    </label><br/>
+
+    <input type="submit" value="Submit"/> <input type="reset" value="Reset"/>
+</form>
+</body>
+</html>

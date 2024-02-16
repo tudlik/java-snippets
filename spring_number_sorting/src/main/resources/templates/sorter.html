@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number sorter</title>
+</head>
+<body>
+<h1>Number sorter - statistics</h1>
+<hr>
+<form action="/sorter" method="post">
+    <label>
+        <p>Integer input:</p>
+        <input type="text" name="text" id="text" th:field="${inputTextDTO.textInput}">
+    </label>
+    <label>
+        Sort by:
+        <select name="option" id="option" th:field="${inputTextDTO.ascOrder}">
+            <option value="false">Descendent</option>
+            <option value="true">Ascendent</option>
+        </select>
+
+    </label>
+    <input type="submit" value="Sort it">
+</form>
+<br>
+<br>
+<div th:if="${statistics}">
+    <div>
+        <label>Sum</label>
+        <p th:text="${statistics.getSum()}"></p>
+    </div>
+    <div>
+        <label>Min</label>
+        <p th:text="${statistics.getMin()}"></p>
+    </div>
+    <div>
+        <label>Max</label>
+        <p th:text="${statistics.getMax()}"></p>
+    </div>
+    <div>
+        <label>Avg</label>
+        <p th:text="${statistics.getAvg()}"></p>
+    </div>
+    <div>
+        <label>Sorted number</label>
+        <p th:text="${statistics.getStringListOfNumbers}"></p>
+    </div>
+</div>
+</body>
+</html>

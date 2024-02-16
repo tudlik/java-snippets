@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Neznámá chyba</title>
+</head>
+<body>
+<h1>Nastala neznámá chyba - <span th:text="${status}"></span></h1>
+<p th:text="${message}"></p>
+<h2>Chyba:</h2>
+<pre th:text="${trace}"></pre>
+
+</body>
+</html>

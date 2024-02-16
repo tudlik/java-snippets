@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <title>Random number generator</title>
+</head>
+<body>
+<h1>Random number generator</h1>
+<br>
+<hr>
+<form action="/generator" method="post">
+    <label>
+        From number:
+        <br>
+        <input type="number" name="number1" id="number1" th:field="${generatorDTO.number1}">
+    </label>
+    <br/>
+    <label>
+        To number:
+        <br>
+        <input type="number" name="number2" id="number2"  th:field="${generatorDTO.number2}">
+    </label>
+    <br>
+    <input type="submit" value="Generate">
+    <br>
+    <p th:if="${errorMessage}" style="color: red;" th:text="${errorMessage}"></p>
+    <p th:if="${generatedNumber}" th:text="'Random number: ' + ${generatedNumber}"></p>
+</form>
+</body>
+</html>

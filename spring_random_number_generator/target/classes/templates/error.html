@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random number generator - Neznámá chyba</title>
+</head>
+<body>
+<h1>Random number generator - Nastala neznámá chyba - <span th:text="${status}"></span></h1>
+<p th:text="${message}"></p>
+<h2>Chyba:</h2>
+<p>Time</p>
+<p th:text="${timestamp}"></p>
+<p>Path</p>
+<p th:text="${path}"></p>
+<p>Error</p>
+<p th:text="${error}"></p>
+<p>Trace</p>
+<p th:text="${trace}"></p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring_calculator" />
+        <module name="collections_cv1-5_diary" />
+        <module name="collections_cv6-7_developers" />
+        <module name="springboot_restApi_basics" />
+        <module name="springboot_basics" />
+        <module name="collections_cv6-7_hannoiTowers" />
+        <module name="spring_number_sorting" />
+        <module name="spring_photo_app" />
+        <module name="spring_random_number_generator" />
+        <module name="springboot_restApi_test" />
+        <module name="spring_text_enlargement" />
+        <module name="collections_cv1-5_box" />
+      </profile>
+      <profile name="Annotation profile for java_spring" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="springboot_blog" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="fancy_app" target="21" />
+      <module name="spring_basic" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
