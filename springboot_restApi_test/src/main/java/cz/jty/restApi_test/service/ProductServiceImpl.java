@@ -28,8 +28,8 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
-    public List<ProductDTO> getAllProducts() {
-        List<Product> products = productRepository.findAll(); // pageNumber - cislo stranky - pokud je 0 tak zobrazi pouze jednu stranku ,druha hodnota udava pocet prvku na strnku, pokud je integer max tak vypise vse, Sort.by -udava razeni, je vzdy rostouci, a bude se radit podle id, ktere ziska v metode
+    public List<ProductDTO> getAllProducts(String sortBy) {
+        Page<Product> products = productRepository.findAll(PageRequest.of(0, Integer.MAX_VALUE, Sort.by(Sort.Direction.ASC, sortBy))); // pageNumber - cislo stranky - pokud je 0 tak zobrazi pouze jednu stranku ,druha hodnota udava pocet prvku na strnku, pokud je integer max tak vypise vse, Sort.by -udava razeni, je vzdy rostouci, a bude se radit podle id, ktere ziska v metode
         List<ProductDTO> productsDTO = new ArrayList<>();
         for(Product product: products){
             productsDTO.add(productMapper.toProductDTO(product));

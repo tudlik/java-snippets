@@ -34,10 +34,10 @@ public class ProductController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
-    @GetMapping("/products")
-    public ResponseEntity<List<ProductDTO>> getAllProducts(){ // @RequestParam udava, ze parametr neni povinny a v pripade nezadani se pouzije defaultni hodnota
+    @GetMapping(value = "/products")
+    public ResponseEntity<List<ProductDTO>> getAllProducts(@RequestParam (name = "sortBy", defaultValue = "id") String sortBy){ // @RequestParam udava, ze parametr neni povinny a v pripade nezadani se pouzije defaultni hodnota
         try {
-            List<ProductDTO> productsDTO = productService.getAllProducts();
+            List<ProductDTO> productsDTO = productService.getAllProducts(sortBy);
             return ResponseEntity.ok(productsDTO);
         }catch (IllegalArgumentException illegalArgumentException){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
