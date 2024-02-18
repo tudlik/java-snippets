@@ -34,7 +34,7 @@ public class ProductController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
-    @GetMapping(value = "/products")
+    @GetMapping(value = "/products") // kdyz ma byt sortBy nepovinny tak nemsmi byt uveden v hlavicce mappingu. Jinak kdyby byl povinny tak by vypadal takto: @GetMapping(value = "/products",params = "sortBy")
     public ResponseEntity<List<ProductDTO>> getAllProducts(@RequestParam (name = "sortBy", defaultValue = "id") String sortBy){ // @RequestParam udava, ze parametr neni povinny a v pripade nezadani se pouzije defaultni hodnota
         try {
             List<ProductDTO> productsDTO = productService.getAllProducts(sortBy);
