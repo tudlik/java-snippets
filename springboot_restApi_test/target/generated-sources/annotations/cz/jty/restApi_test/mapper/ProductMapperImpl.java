@@ -2,14 +2,13 @@ package cz.jty.restApi_test.mapper;
 
 import cz.jty.restApi_test.model.dto.ProductDTO;
 import cz.jty.restApi_test.model.entity.Product;
-import java.math.BigDecimal;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-16T14:48:16+0100",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.1 (Amazon.com Inc.)"
+    date = "2024-02-18T17:17:30+0100",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.2 (Amazon.com Inc.)"
 )
 @Component
 public class ProductMapperImpl implements ProductMapper {
@@ -25,9 +24,7 @@ public class ProductMapperImpl implements ProductMapper {
         productDTO.setId( source.getId() );
         productDTO.setImage( source.getImage() );
         productDTO.setName( source.getName() );
-        if ( source.getPrice() != null ) {
-            productDTO.setPrice( source.getPrice().toString() );
-        }
+        productDTO.setPrice( source.getPrice() );
 
         return productDTO;
     }
@@ -43,9 +40,7 @@ public class ProductMapperImpl implements ProductMapper {
         product.setId( source.getId() );
         product.setImage( source.getImage() );
         product.setName( source.getName() );
-        if ( source.getPrice() != null ) {
-            product.setPrice( new BigDecimal( source.getPrice() ) );
-        }
+        product.setPrice( source.getPrice() );
 
         return product;
     }

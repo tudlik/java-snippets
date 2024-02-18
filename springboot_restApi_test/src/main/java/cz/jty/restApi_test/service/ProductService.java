@@ -6,6 +6,8 @@ import cz.jty.restApi_test.model.entity.Product;
 import java.util.List;
 
 public interface ProductService {
+
+
     List<ProductDTO> getAllProducts();
 
     void createProduct(ProductDTO productDTO);

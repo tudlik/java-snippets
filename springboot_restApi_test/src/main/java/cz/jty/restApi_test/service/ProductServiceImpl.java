@@ -5,10 +5,16 @@ import cz.jty.restApi_test.mapper.ProductMapper;
 import cz.jty.restApi_test.model.dto.ProductDTO;
 import cz.jty.restApi_test.model.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.springframework.data.domain.Sort.*;
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -20,9 +26,10 @@ public class ProductServiceImpl implements ProductService {
         this.productMapper = productMapper;
     }
 
+
     @Override
     public List<ProductDTO> getAllProducts() {
-        List<Product> products = productRepository.findAll();
+        List<Product> products = productRepository.findAll(); // pageNumber - cislo stranky - pokud je 0 tak zobrazi pouze jednu stranku ,druha hodnota udava pocet prvku na strnku, pokud je integer max tak vypise vse, Sort.by -udava razeni, je vzdy rostouci, a bude se radit podle id, ktere ziska v metode
         List<ProductDTO> productsDTO = new ArrayList<>();
         for(Product product: products){
             productsDTO.add(productMapper.toProductDTO(product));
@@ -43,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void updateProductById(long id, ProductDTO productDTO) {
-        ProductDTO updateProductDTO =  getProductById(id);
+        ProductDTO updateProductDTO = productMapper.toProductDTO(productRepository.findById(id).orElseThrow());
         updateProductDTO.setName(productDTO.getName());
         updateProductDTO.setImage(productDTO.getImage());
         updateProductDTO.setPrice(productDTO.getPrice());

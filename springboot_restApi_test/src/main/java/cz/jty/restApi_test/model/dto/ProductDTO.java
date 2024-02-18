@@ -2,6 +2,8 @@ package cz.jty.restApi_test.model.dto;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class ProductDTO {
 
@@ -9,7 +11,7 @@ public class ProductDTO {
 
     String image;
     String name;
-    String price;
+    BigDecimal price;
 
 
 }

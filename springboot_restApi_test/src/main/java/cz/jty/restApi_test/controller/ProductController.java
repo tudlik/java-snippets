@@ -5,9 +5,11 @@ import cz.jty.restApi_test.model.dto.ProductDTO;
 import cz.jty.restApi_test.model.entity.Product;
 import cz.jty.restApi_test.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
@@ -23,25 +25,29 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public ResponseEntity<ProductDTO> getProductById(@PathVariable ("name") long id){
+    public ResponseEntity<ProductDTO> getProductById(@PathVariable ("id") long id){
         try {
             return ResponseEntity.ok(productService.getProductById(id));
-        }catch (Exception e){
+        }catch (IllegalArgumentException illegalArgumentException){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
     @GetMapping("/products")
-    public ResponseEntity<List<ProductDTO>> getAllProducts(){
+    public ResponseEntity<List<ProductDTO>> getAllProducts(){ // @RequestParam udava, ze parametr neni povinny a v pripade nezadani se pouzije defaultni hodnota
         try {
-            List<ProductDTO> productsDTO= productService.getAllProducts();
+            List<ProductDTO> productsDTO = productService.getAllProducts();
             return ResponseEntity.ok(productsDTO);
+        }catch (IllegalArgumentException illegalArgumentException){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
     @PutMapping("/product/{id}")
-    public ResponseEntity<String> updateProductById(long id, @RequestBody ProductDTO productDTO){
+    public ResponseEntity<String> updateProductById(@PathVariable ("id") long id, @RequestBody ProductDTO productDTO){
         try {
             productService.updateProductById(id,productDTO);
             return ResponseEntity.ok("Product has been updated");
@@ -51,7 +57,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteProductById(long id){
+    public ResponseEntity<String> deleteProductById(@PathVariable("id") long id){
         try {
             productService.deleteProductById(id);
             return ResponseEntity.ok("Product was deleted");
