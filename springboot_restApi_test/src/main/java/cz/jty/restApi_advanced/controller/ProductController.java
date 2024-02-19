@@ -1,17 +1,13 @@
-package cz.jty.restApi_test.controller;
+package cz.jty.restApi_advanced.controller;
 
-import cz.jty.restApi_test.dao.ProductRepository;
-import cz.jty.restApi_test.model.dto.ProductDTO;
-import cz.jty.restApi_test.model.entity.Product;
-import cz.jty.restApi_test.service.ProductService;
+import cz.jty.restApi_advanced.model.dto.ProductDTO;
+import cz.jty.restApi_advanced.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 

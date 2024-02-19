@@ -1,9 +1,9 @@
-package cz.jty.restApi_test.service;
+package cz.jty.restApi_advanced.service;
 
-import cz.jty.restApi_test.dao.ProductRepository;
-import cz.jty.restApi_test.mapper.ProductMapper;
-import cz.jty.restApi_test.model.dto.ProductDTO;
-import cz.jty.restApi_test.model.entity.Product;
+import cz.jty.restApi_advanced.dao.ProductRepository;
+import cz.jty.restApi_advanced.mapper.ProductMapper;
+import cz.jty.restApi_advanced.model.dto.ProductDTO;
+import cz.jty.restApi_advanced.model.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.springframework.data.domain.Sort.*;
 
 @Service
 public class ProductServiceImpl implements ProductService {

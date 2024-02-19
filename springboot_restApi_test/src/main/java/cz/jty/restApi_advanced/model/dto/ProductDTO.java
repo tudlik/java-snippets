@@ -1,4 +1,4 @@
-package cz.jty.restApi_test.model.dto;
+package cz.jty.restApi_advanced.model.dto;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package cz.jty.restApi_test.model.entity;
+package cz.jty.restApi_advanced.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

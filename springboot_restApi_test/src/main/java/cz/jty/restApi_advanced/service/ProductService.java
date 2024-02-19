@@ -1,7 +1,6 @@
-package cz.jty.restApi_test.service;
+package cz.jty.restApi_advanced.service;
 
-import cz.jty.restApi_test.model.dto.ProductDTO;
-import cz.jty.restApi_test.model.entity.Product;
+import cz.jty.restApi_advanced.model.dto.ProductDTO;
 
 import java.util.List;
 

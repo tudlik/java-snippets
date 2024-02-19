@@ -1,7 +1,7 @@
-package cz.jty.restApi_test.mapper;
+package cz.jty.restApi_advanced.mapper;
 
-import cz.jty.restApi_test.model.dto.ProductDTO;
-import cz.jty.restApi_test.model.entity.Product;
+import cz.jty.restApi_advanced.model.dto.ProductDTO;
+import cz.jty.restApi_advanced.model.entity.Product;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

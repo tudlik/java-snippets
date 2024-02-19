@@ -1,13 +1,13 @@
-package cz.jty.restApi_test.mapper;
+package cz.jty.restApi_advanced.mapper;
 
-import cz.jty.restApi_test.model.dto.ProductDTO;
-import cz.jty.restApi_test.model.entity.Product;
+import cz.jty.restApi_advanced.model.dto.ProductDTO;
+import cz.jty.restApi_advanced.model.entity.Product;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-19T08:42:52+0100",
+    date = "2024-02-19T12:18:33+0100",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.1 (Amazon.com Inc.)"
 )
 @Component
