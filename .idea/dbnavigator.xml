@@ -19,8 +19,8 @@
     <connection id="f6a3ede1-bfd4-41ef-9667-a5ed0e5c0aa6">
       <console name="blog-mysql" type="STANDARD" schema="" session="Main" />
     </connection>
-    <connection id="6a79f9d2-dbf5-4782-8c92-08139652da00">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="24584a58-e988-4eb6-80e8-2746d319fe34">
+      <console name="moviedb" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -144,20 +144,20 @@
           <object-name-filters />
         </object-filters>
       </connection>
-      <connection id="6a79f9d2-dbf5-4782-8c92-08139652da00" active="true" signed="true">
+      <connection id="24584a58-e988-4eb6-80e8-2746d319fe34" active="true" signed="true">
         <database>
-          <name value="user db" />
+          <name value="moviedb" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="8.3" />
+          <database-version value="9999.0" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="user" />
+          <database value="moviedb" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
