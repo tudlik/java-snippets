@@ -13,11 +13,11 @@ public class ProductDTO {
 
     long id;
 
-    @NotNull
+    @NotNull  // musi byt pridana dependency Validation
     String image;
-    @Size(min = 3)
+    @Size(min = 3)  // musi byt pridana dependency Validation
     String name;
-    @Min(1)
+    @Min(1)  // musi byt pridana dependency Validation
     BigDecimal price;
 
 

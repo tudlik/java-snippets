@@ -2,6 +2,10 @@ package cz.jty.service;
 
 import cz.jty.model.dto.PersonDTO;
 
+import java.util.List;
+
 public interface PersonService {
-    PersonDTO addPerson(PersonDTO personDTO);
+    void addPerson(PersonDTO personDTO);
+
+    List<PersonDTO> allPersons();
 }

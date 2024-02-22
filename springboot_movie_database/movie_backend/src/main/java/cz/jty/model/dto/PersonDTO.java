@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 
-@Data
-@NoArgsConstructor
+@Data   // vytvori gettery, setter, toString atd..
+@NoArgsConstructor // pouziva se k tomu, aby mohl mapper vytvorit objekt bez parametru a pak pridava polozk pomoci setteru
 @AllArgsConstructor
 public class PersonDTO {
     @JsonProperty("_id") //je nastaveno aby se v JSON objevilo id jako _id - pozadavek API na frontendu, ktere muze byt ale nemusi

@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import java.util.Date;
 
-@Entity(name="person")
+@Entity(name="person") // vytvori tabulku s navem person misto person_entity
 @Getter
 @Setter
 public class PersonEntity {
@@ -23,7 +23,5 @@ public class PersonEntity {
     private String biography;
     @Column(nullable = false)
     private String role;
-
-
 
 }
