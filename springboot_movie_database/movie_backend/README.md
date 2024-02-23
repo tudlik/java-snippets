@@ -1,1 +1,0 @@
-V pripade nasazeni na serveru je nut smazat tridu WebConfiguration

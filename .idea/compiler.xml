@@ -8,18 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_calculator" />
+        <module name="collections_cv1-5_diary" />
+        <module name="collections_cv6-7_developers" />
         <module name="springboot_restApi_basics" />
         <module name="springboot_basics" />
         <module name="collections_cv6-7_hannoiTowers" />
         <module name="spring_number_sorting" />
-        <module name="spring_random_number_generator" />
-        <module name="collections_cv1-5_box" />
-        <module name="collections_cv1-5_diary" />
-        <module name="movie_backend" />
-        <module name="collections_cv6-7_developers" />
+        <module name="springboot_restApi_advanced" />
         <module name="spring_photo_app" />
-        <module name="springboot_restApi_test" />
+        <module name="spring_random_number_generator" />
         <module name="spring_text_enlargement" />
+        <module name="collections_cv1-5_box" />
       </profile>
       <profile name="Annotation profile for java_spring" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -34,9 +33,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fancy_app" target="21" />
+      <module name="movie_backend" target="21" />
       <module name="spring_basic" target="21" />
-      <module name="springboot_movie_database" target="21" />
-      <module name="springboot_restApi_advanced" target="21" />
+      <module name="springboot_restApi_test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

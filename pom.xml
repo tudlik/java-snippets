@@ -18,12 +18,14 @@
         <module>springboot_blog</module>
         <module>spring_photo_app</module>
         <module>springboot_restApi_basics</module>
+        <module>springboot_restApi_advanced</module>
         <module>collections_cv1-5_box</module>
         <module>collections_cv1-5_diary</module>
         <module>collections_cv6-7_developers</module>
         <module>collections_cv6-7_hannoiTowers</module>
-        <module>springboot_restApi_test</module>
-        <module>springboot_movie_database/movie_backend</module>
+        <module>springboot_movie_database</module>
+
+
     </modules>
 
     <properties>
