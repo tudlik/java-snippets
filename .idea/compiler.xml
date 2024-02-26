@@ -8,17 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_calculator" />
-        <module name="collections_cv1-5_diary" />
-        <module name="collections_cv6-7_developers" />
         <module name="springboot_restApi_basics" />
         <module name="springboot_basics" />
         <module name="collections_cv6-7_hannoiTowers" />
         <module name="spring_number_sorting" />
         <module name="springboot_restApi_advanced" />
-        <module name="spring_photo_app" />
         <module name="spring_random_number_generator" />
-        <module name="spring_text_enlargement" />
         <module name="collections_cv1-5_box" />
+        <module name="collections_cv1-5_diary" />
+        <module name="collections_cv6-7_developers" />
+        <module name="spring_photo_app" />
+        <module name="spring_text_enlargement" />
       </profile>
       <profile name="Annotation profile for java_spring" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />

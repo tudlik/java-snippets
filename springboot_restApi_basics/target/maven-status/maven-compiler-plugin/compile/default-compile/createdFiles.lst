@@ -1,0 +1,11 @@
+cz\jty\restApiBasics\mapper\UserMapper.class
+cz\jty\restApiBasics\controller\UserController.class
+cz\jty\restApiBasics\service\UserServiceImpl.class
+cz\jty\restApiBasics\model\dto\UserDTO.class
+cz\jty\restApiBasics\model\entity\User.class
+cz\jty\restApiBasics\service\UserService.class
+cz\jty\restApiBasics\mapper\UserMapperImpl.class
+cz\jty\restApiBasics\RestApiBasics.class
+cz\jty\restApiBasics\dao\UserRepository.class
+cz\jty\restApiBasics\controller\UserJdbcController.class
+cz\jty\restApiBasics\dao\UserJdbcRepository.class
